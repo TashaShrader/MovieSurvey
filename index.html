@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Movie Survey</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- css -->
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/survey.css">
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link
+        href="https://fonts.googleapis.com/css?family=Amatic+SC|Anton|Arvo|Dancing+Script|Fjalla+One|Hanalei+Fill|Inconsolata|Noto+Serif|Pacifico|Righteous|Rubik|Shadows+Into+Light|Staatliches|Ubuntu+Condensed|Work+Sans|ZCOOL+QingKe+HuangYou"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="jumbotron-top" style="background-color: dimgray" id="round">
+        <h1 id="title">
+            Surveys for Movies
+        </h1>
+    </div>
+    <div class="jumbotron jumbotron-fluid custom-jumbo" style="background-color: dimgray" id="round">
+        <div class="startContainer"></div>
+        <div id="survey">
+            <p id="intro">Welcome to Survey for Movies. <br> Start your free survey below to get your ideal
+                travel
+                destinations <br> and travel information based off your movie interests.</p>
+            <br>
+            <p id="start-survey" class="lead">Click below to start your survey!</p>
+        </div>
+        <div class="row custom-button">
+            <div id="start_button" class="text-center">
+                <button id="start_button" class="btn btn-dark btn-lg">Start</button>
+                <!-- this button will hide the startContainer and show the movieSurvey_container -->
+            </div>
+            <!-- survey is in this div that starts hiden then will be shown -->
+            <div id="movieSurvey_container">
+                <!-- logo again to use -->
+                <h1 class="logo"></h1>
+                <!-- questions will go here -->
+                <form id="frm1" action="/action_page.php">
+                    Enter Your Name: <input type="text" id="userID" placeholder="Name"><br>
+                    Enter Your Zipcode: <input type="text" id="userZipcode" placeholder="for travel route"><br><br>
+                    <div id="errorMessage"><b>Please enter your Name and a valid Zipcode</b></div>
+                </form>
+                <h3>1. What is your preferred movie genre?</h3>
+                <!-- var for genre is taken from here -->
+                <input type="radio" name="genreVar" value="Action">Action &nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="radio" name="genreVar" value="Documentery">Documentery &nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="radio" name="genreVar" value="Romance">Romance
+                <h3>2. What is your preferred movie length?</h3>
+                <!-- var for length is taken from here -->
+                <input type="radio" name="lengthVar" value="Shorter">Shorter &nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="radio" name="lengthVar" value="Longer">Longer
+                <h3>3. What is your preferred movie rating?</h3>
+                <!-- var for rating is taken from here -->
+                <input type="radio" name="ratingVar" value="PG">PG &nbsp;&nbsp;
+                <input type="radio" name="ratingVar" value="PG13">PG13 &nbsp;&nbsp;
+                <input type="radio" name="ratingVar" value="R">R
+                <div id="errorMessage2"><b>
+                        Please Fill out the survey completely.
+                    </b>
+                </div>
+                <h3>Click Done! when finished</h3>
+                <button id="done_button">Done!</button>
+
+            </div>
+            <div id="last">
+                <div id="omdbAPI"></div>
+                <div id="omdbAPI2"></div>
+                <div id="omdbAPI3"></div>
+            </div>
+            <div id="googleMapAPI">
+                <div id="backButton">click to go back!</div>
+                <div id="map" style="width: 280px; height: 400px;"></div>
+                <div id="directions">click for directions!</div>
+                <div id="panel" style="width: 280px;"></div>
+            </div>
+</body>
+
+</html>
+</div>
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"
+    integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"> </script>
+<script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDClN8Ffd-K6dipkrlD1CjZZTdyvSq4z98&callback=initMap"></script>
+<script src="assets/js/main.js"></script>
+</body>
+
+</html>
